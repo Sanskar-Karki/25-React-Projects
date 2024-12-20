@@ -1,12 +1,22 @@
 import { useState } from "react"
 import accordionData from "./data"
 
-const SingleAccordian = () => {
-  const [selected, setSelected] = useState(null)
+const MultiAccordian = () => {
+
+  const [multiSelection, setMultiSelection] = useState([])
+
   const handleClick = (dataIndex) => {
-    setSelected(dataIndex === selected ? null : dataIndex)
+    const multiArray = [...multiSelection]
+    const findIndexOfCurrent = multiArray.indexOf(dataIndex)
+    console.log(findIndexOfCurrent)
+    if (findIndexOfCurrent === -1) {
+      setMultiSelection([...multiSelection, dataIndex])
+    } else {
+      setMultiSelection(multiArray.filter((item) => item !== dataIndex))
+    }
   }
-  console.log(selected)
+  console.log(multiSelection)
+
   return (
     <div>
       <div className="wrapper">
@@ -19,11 +29,11 @@ const SingleAccordian = () => {
                     <h3 >
                       {data.question}
                     </h3>
-                    <span style={{ fontSize: "25px" }}>{selected === data.id ? "-" : "+"}</span>
+                    <span style={{ fontSize: "25px" }}>{multiSelection === data.id ? "-" : "+"}</span>
                   </div>
                   <div className='answer'>
                     {
-                      selected === data.id ? <div className='content'> {data.answer}</div> : null
+                      multiSelection.indexOf(data.id) !== -1 ? <div className='content'> {data.answer}</div> : null
                     }
                   </div>
                 </div>
@@ -41,4 +51,4 @@ const SingleAccordian = () => {
   )
 }
 
-export default SingleAccordian
+export default MultiAccordian
