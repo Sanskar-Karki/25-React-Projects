@@ -1,0 +1,34 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper{
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+.accordian{
+  width: 500px;
+
+}
+.item{
+  background-color: rgb(37, 62, 104);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 20px;
+}
+.title{
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.answer{
+  color: white;
+  padding:12px;
+  text-align: justify;
+}
