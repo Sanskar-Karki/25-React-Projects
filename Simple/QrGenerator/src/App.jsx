@@ -24,6 +24,7 @@ const App = () => {
           id="qr-code-value"
           value={qrCode}
           bgColor="#fff"
+          fgColor="#716"
         />
       </div>
     </div>

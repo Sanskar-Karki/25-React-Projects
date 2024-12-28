@@ -15,13 +15,17 @@ button{
   background-color: black;
   color: white;
   border-radius: 20px;
+  border: 2px solid purple;
   &:hover{
-    background-color: rgba(0, 0, 0, 0.705);
+    background-color: rgba(119, 17, 102, 0.808);
+    box-shadow: 0 0 20px rgba(119, 17, 102, 0.808); 
   }
 }
 input{
   padding: 5px 20px 5px 5px;
   margin-right: 10px;
   border-radius: 15px;
-  
+  &:focus{
+    box-shadow: 0 0 20px rgba(119, 17, 102, 0.808); 
+  }
 }
