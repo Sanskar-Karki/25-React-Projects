@@ -1,7 +1,10 @@
+import LightDarkMode from "./components/LightDarkMode"
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+      <LightDarkMode />
+    </>
   )
 }
 
