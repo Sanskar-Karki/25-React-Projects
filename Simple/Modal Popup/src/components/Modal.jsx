@@ -16,8 +16,14 @@ const Modal = () => {
       {
         showModalPopup &&
         <ModalContent onClose={onClose}
+          header={
+            <div>Customized Header</div>
+          }
           body={
             <div>Customized Body</div>
+          }
+          footer={
+            <div>Customized Footer</div>
           }
         />
       }

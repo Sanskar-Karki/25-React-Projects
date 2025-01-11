@@ -13,9 +13,11 @@ const ModalContent = ({ id, body, header, footer, onClose }) => {
           )}
         </div>
         <div className="footer">
-          {footer ? footer : (
-            <div><h2>Footer</h2></div>
-          )}
+          <h2>
+            {footer ? footer : (
+              "Footer"
+            )}
+          </h2>
         </div>
       </div>
     </div >
